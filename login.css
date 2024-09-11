@@ -1,4 +1,3 @@
-/* General body styling */
 body {
   font-family: "Baloo Bhai 2", "Playpen Sans", sans-serif;
   background: linear-gradient(135deg, #3b4d5e 0%, #7f9be9 99%, #133c79 100%);
@@ -9,7 +8,6 @@ body {
   margin: 0;
 }
 
-/* Container styling */
 .container {
   background: linear-gradient(145deg, #ffffff, #f2f2f2);
   padding: 50px;
@@ -20,7 +18,6 @@ body {
   text-align: center;
 }
 
-/* Heading styling */
 h1 {
   font-size: 57px;
   margin-bottom: 18px;
@@ -30,7 +27,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* Label styling */
 label {
   display: block;
   margin-bottom: 10px;
@@ -39,14 +35,12 @@ label {
   text-align: left;
 }
 
-/* Input field styling */
 .input-container {
   margin-bottom: 20px;
 }
 
 input[type="text"],
 input[type="password"] {
-  /* width: 100%; */
   width: calc(100% - 28px);
   padding: 14px 10px;
   border: none;
@@ -63,7 +57,6 @@ input[type="password"]:focus {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Checkbox container styling */
 .checkbox-container {
   display: flex;
   justify-content: space-around;
@@ -71,7 +64,6 @@ input[type="password"]:focus {
   margin-bottom: 10px;
 }
 
-/* Button styling */
 button {
   width: 100%;
   padding: 14px 0;

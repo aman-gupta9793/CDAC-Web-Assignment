@@ -1,11 +1,9 @@
-// Show/Hide password functionality
 function togglePassword() {
   const passwordField = document.getElementById("password");
   const checkbox = document.getElementById("togglePasswordCheckbox");
   passwordField.type = checkbox.checked ? "text" : "password";
 }
 
-// Form validation
 function validateForm() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -13,11 +11,9 @@ function validateForm() {
   const passwordError = document.getElementById("passwordError");
   let isValid = true;
 
-  // Clear previous error messages
   emailError.textContent = "";
   passwordError.textContent = "";
 
-  // Validate email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     emailError.textContent = "Email is required";
@@ -27,7 +23,6 @@ function validateForm() {
     isValid = false;
   }
 
-  // Validate password
   if (!password) {
     passwordError.textContent = "Password is required";
     isValid = false;
@@ -54,17 +49,14 @@ function validateForm() {
   return isValid;
 }
 
-// Form submission
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
 
   if (validateForm()) {
-    // Show loading spinner
     const spinner = document.getElementById("spinner");
     spinner.style.display = "block";
 
-    // API call simulation
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -98,7 +90,6 @@ loginForm.addEventListener("submit", function (event) {
         document.getElementById("successMessage").textContent = "";
       });
 
-    // Remember me functionality
     if (document.getElementById("rememberMe").checked) {
       localStorage.setItem("rememberMe", email);
     }
