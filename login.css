@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+  font-family: "Baloo Bhai 2", "Playpen Sans", sans-serif;
+  background: linear-gradient(135deg, #3b4d5e 0%, #7f9be9 99%, #133c79 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Styling for the container */
+.container {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Form title */
+h1 {
+  font-size: 57px;
+  margin-bottom: 18px;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #555;
+  text-align: left;
+}
+
+/* Input fields styling */
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  font-size: 15px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Checkbox styling */
+.checkbox-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Error and success messages styling */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Loading spinner */
+.spinner {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design using media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

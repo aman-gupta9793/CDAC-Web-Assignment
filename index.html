@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Playpen+Sans:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="loginForm">
+        <h1>Login</h1>
+
+        <!-- Email Field -->
+        <div class="input-container">
+          <label for="email">Username or Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div id="emailError" class="error"></div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <div id="passwordError" class="error"></div>
+        </div>
+
+        <!-- Checkbox Row for Show Password and Remember Me -->
+        <div class="checkbox-row">
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="togglePasswordCheckbox"
+              onclick="togglePassword()"
+            />
+            <label for="togglePasswordCheckbox">Show Password</label>
+
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <label for="rememberMe">Remember me</label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+
+        <!-- Loading Spinner -->
+        <div class="spinner" id="spinner"></div>
+
+        <!-- Success and Error Messages -->
+        <div class="success" id="successMessage"></div>
+        <div class="error" id="errorMessage"></div>
+      </form>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
