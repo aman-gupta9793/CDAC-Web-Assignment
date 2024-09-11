@@ -1,0 +1,74 @@
+/* General and container styles */
+body {
+    font-family: "Baloo Bhai 2", "Playpen Sans", sans-serif;
+    background: linear-gradient(135deg, #3b4d5e 0%, #7f9be9 99%, #133c79 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: linear-gradient(145deg, #ffffff, #f2f2f2);
+    padding: 15px;  /* Adjusted padding for better space management */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure it does not exceed the viewport width */
+    width: 90%; /* Utilize percentage for better responsiveness */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the width */
+  }
+  
+  /* Adjusting input fields */
+  input[type="text"],
+  input[type="password"] {
+    width: calc(100% - 28px); /* Adjust width to account for padding */
+    padding: 14px;
+    margin: 0; /* Remove any default margin */
+    border: 1px solid #ccc; /* Add border to enhance visibility */
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    font-size: 15px;
+    box-shadow: none; /* Optionally remove shadow if not needed */
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #667eea; /* Highlight with a color on focus */
+    background-color: #fff;
+  }
+  
+  /* Media Queries for device specific adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px; /* Slightly reduce padding */
+    }
+    input[type="text"],
+    input[type="password"] {
+      font-size: 14px; /* Adjust font size for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 8px; /* Even smaller padding for very small devices */
+    }
+    input[type="text"],
+    input[type="password"] {
+      font-size: 13px; /* Smaller font size for smaller devices */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    h1, label, button, .error, .success {
+      font-size: 14px; /* Uniform smaller font size for smallest devices */
+    }
+  }
+  
+  @media (max-width: 300px) {
+    h1, label, button, .error, .success {
+      font-size: 12px; /* Very small font sizes for very small devices */
+    }
+  }
+  
