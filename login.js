@@ -34,6 +34,21 @@ function validateForm() {
   } else if (password.length < 6) {
     passwordError.textContent = "Password must be at least 6 characters long";
     isValid = false;
+  } else if (!/[a-z]/.test(password)) {
+    passwordError.textContent =
+      "Password must contain at least one lowercase letter";
+    isValid = false;
+  } else if (!/[A-Z]/.test(password)) {
+    passwordError.textContent =
+      "Password must contain at least one uppercase letter";
+    isValid = false;
+  } else if (!/[0-9]/.test(password)) {
+    passwordError.textContent = "Password must contain at least one number";
+    isValid = false;
+  } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    passwordError.textContent =
+      "Password must contain at least one special character";
+    isValid = false;
   }
 
   return isValid;
